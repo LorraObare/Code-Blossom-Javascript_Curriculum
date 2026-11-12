@@ -321,6 +321,25 @@ Choosing a traversal comes down to when you need to act on a node relative to it
   //Application: This is a level-order traversal (checking everyone on floor 1, then everyone on floor 2)
   
   
+  //RECURSION.
+  //-Recursion is a programming technique where a function calls itself to solve a problem by breaking it down into smaller, identical sub-problems. In data structures, it is the primary method used to navigate and manipulate self similar structures like trees, graphs and linked lists.
+  //At its simplest, recursion is solving a big problem by breaking it down into smaller, identical versions of the exact same problem, until the problem becomes so tiny you can solve it instantly.
+  //Instead of trying to tackle everything at once, you do just one tiny piece of the work and pass the rest of the identical work down the line.
+  
+  //Real-Life Examples of Recursion.
+  //You can actually use recursive thinking in everyday life without realizing it.
+
+  //Why recusrion is important to understand.
+  //Even though standard loops (for and while)loops can solve many problems, recursion is a critical skill for several reasons.
+  //Navigating Real- World Data.
+  //-Modern software is built on nested , branching data. Family trees, company org charts, website menus, and comment threads (like replies to replies on social media) are all recursive structures. Recursion lets you navigate these complex branches effortlessly.
+
+  //Writing cleaner, Shorter code- Problems that require navigating mazes, solving Soduku puzzles, or searching folders can take dozens of confusing lines of code using standard loops. Recursion often solves the exact same problem in just 5 to 10 clean readable lines.
+
+  //Powering Everyday Technology- Algorithms that sort massive amounts of data quickly find the fastest route on a map, or help computer AI play games like chess all rely heavily on recursive "divide and conquer" strategies.
+
+  //Leveling Up Your problem- Solving mindset
+  //Learning recursion trains your brain to stop orrying about the entire giant problem at once. Instead, you learn to focus only on the very first step and trust that repeating that logic will handle the rest.
   
   
   
