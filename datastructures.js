@@ -341,6 +341,79 @@ Choosing a traversal comes down to when you need to act on a node relative to it
   //Leveling Up Your problem- Solving mindset
   //Learning recursion trains your brain to stop orrying about the entire giant problem at once. Instead, you learn to focus only on the very first step and trust that repeating that logic will handle the rest.
   
+  //The smalled case in recursion is called base case.
+  //An example of adding the range of numbers 
+  //First we call the function
+
+  function sumRange(k) {
+  if (k > 0) {
+    return k + sumRange( k - 1);
+} else {
+    return 0;
+  }
+}
+
+const result = sumRange(50)
+console.log(result); 
+}
   
-  
+//Example explained
+//10 + sum(9)
+//10 + (9 + sum(8) )
+//10 + (9 + (8 + sum(7) ) )
+
+//10 + 9 + 8 + 7 ... + 1 + sum(0)
+
+//Count down example
+//This example prints numbers down from 5 to 1 using recursion:
+
+function countdown(n) {
+  if (n === 0) {            //base case
+    console.log("Done!");
+} else {
+    console.log (n);
+    countdown(n - 1);       //recursive call
+  }
+}
+
+countdown(5);
+
+//Recursion is when a function calls itself.
+//A base case is needed to stop the recursion.
+//Recursion is useful for problems that break down into smaller, similar problems (like factorial, traversing folders, tree/graph algorithms.
+const family = [
+  "Mary",
+  65,
+  [
+    ["John", 32, [
+      ["John's child", 5, []]
+    ]],
+    ["Luca", 0, []],
+    ["Sarah", 42, [
+      ["Sarah's child", 15, []]
+    ]],
+    ["Jim", 17, []],
+  ]
+];
+
+//We start by building the function which is to get all the adults.
+//The function should get one person at a time.
+//In our array, there is also a structure
+//person[0] //name
+//person[1] //age
+//person[2] //children
+
+function getAdults(person) {
+  if (person[1] >= 18) {
+    console.log(person[0]);
+  }
+  //this first code will print the name of anyone who is 18 or older than 18 years old.
+//recursion comes in when we want to check the children
+
+  person[2].forEach(child => {
+    getAdults(child);
+  });
+}
+
+getAdults(family);
 
