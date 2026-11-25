@@ -32,3 +32,21 @@ console.log(typeof (isGirl));
 
 // Today I learnt about typeof and why it is necessary and even how to use it.
 //The typeof operator in JavaScript is a unary operator that returns a string indicating the data type of an unevaluated operand. It is a fundamental tool for runtime type checking, debugging, and safely identifying data types before performing operations on variables. 
+
+
+// You have an array of items in a shopping cart. Use reduce to calculate the total cost of everything in the cart.
+
+const cart = [
+  { name: "Notebook", price: 250 },
+  { name: "Pen", price: 50 },
+  { name: "Backpack", price: 1800 },
+  { name: "Water bottle", price: 400 },
+];
+// Your task: calculate the total price using reduce
+
+let total = 0;
+for (let i = 0; i < cart.length; i++) {
+  total = total + cart[i].price; // for addition to take place I have to include the plus
+}
+
+console.log(total);
