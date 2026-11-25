@@ -417,3 +417,131 @@ function getAdults(person) {
 
 getAdults(family);
 
+
+
+
+
+//Adding numbers from 1-10
+//Count of number from 0-5
+
+//Sum of range which 1-10
+//Define my base case
+// function sumRange(n) {
+//   if (n > 0){ //base case
+//     return n + sumRange (n - 1);
+//   } else
+//     return 0;
+  
+// }
+// console.log(sumRange (10));
+
+//Counting numbers from 0 - 5
+
+// function numbers (k){
+//   if (k === 0) { // Base case 
+//     console.log("Hurray!");
+//   } else {
+//     console.log(k);
+//     numbers(k - 1);
+//   }  
+// }
+// numbers(5);
+
+const family = [
+  "Mary", 65, [
+    ["John", 47, [
+      ["Jane", 27, [
+        ["Doe", 10, []]
+      ]]
+    ]],
+    ["Luca", 0, []],
+    ["Sarah", 50, [
+      ["Alice", 35, [
+        ["Ray", 20, [
+          ["Cate", 5, []]
+        ]]
+      ]]
+    ]],
+    ["Jim", 17, []],
+  ]
+];
+
+//Mary who is 65 and has 4 children (John ,Luca, Sarah and Jim)
+//John is 47 and has Jane has Doe
+//Luca
+//Sarah is 50 and has Alice and Alice has Ray and Ray has Cate
+//and Jim is 17
+
+//Build the function - getAdults
+// person 0 - Name
+// person 1 - Age
+// person 2 - Children
+
+function getAdults(person){
+if (person[1] >= 18 ){
+  console.log(person[0]);
+} 
+  person[2].forEach(child => {
+    getAdults(child);
+  });  
+}
+getAdults(family);
+
+
+
+
+//Web browser Navigation Simulation.
+//This simulation shows how a web browser manages its Back and Forward navigation history.
+
+//Imagine you open your browser and visit five webisites in this order.
+//1. fun.happy
+//2. shopping.com
+//3. code-blossom
+//4. games.com
+//5. books.me
+
+//Your browser will remember these websites in the order you visited them. Think of it like a list.
+//We can solve this web navigation using the stack concept. And another real life example is the Undo/ Redo in Microsoft or Google docs. Everytime you type a word, it gets pushed onto an "Undo stack" and when you press ctrl + z (Undo), it pops off your most recent action and moves it to a "Redo Stack"
+
+//Why do browsers use two stacks?
+//To make back and Forward buttons work smoothly, your browser keeps two seperate piles.
+//backStack (Your History) : Holds everypage you visited, with your current page sitting right on top.
+//fowardStack(Pages you went back from) : Starts empty. Whenever you click Back, the page you just left gets moved onto this pile so you can return to it late.
+
+//The code
+let backStack = [];
+let fowardStack = [];
+
+function getCurrentPage () {
+  return backStack[backStack.length-1];
+}
+
+function visit(url) {
+  backStack.push(url);
+  forwardStack = [];
+  console.log(`Visited: ${getCurrentPage()}`);
+}
+
+function back() {
+  if (backStack.length > 1) {
+    const currentPage = backStack.pop();
+    forwardStack.push(currentPage);
+    console.log(`Clicked Back -> Now on: ${getCurrentPage()}`);
+  } else {
+    console.log("Cannot go back any further!");
+  }
+}
+
+function forth () {
+  if (forwardStack.lenght > 0) {
+    const nextPage = fowardStack.pop():
+    backStack.push(nextPage);
+    console.log(`Clicked Forth -> Now on : ${getCurrentPage()}`);
+  } else {
+    console.log("Cannot go foward any further!);
+                }
+                }
+}
+    
+}
+  
